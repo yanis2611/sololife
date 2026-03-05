@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://assets.calendly.com">
+  <title>Solo Life Academy — Trading Automatique & E-Commerce | Liberté Financière</title>
+  <meta name="description"
+    content="Rejoins Solo Life Academy : trading automatisé, copy trading VIP et formations e-commerce clé en main. +150 membres accompagnés. Résultats en 3 mois.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solo Life Academy — Trading Automatique & E-Commerce">
+  <meta property="og:description"
+    content="Rejoins Solo Life Academy : trading automatisé, copy trading VIP et formations e-commerce clé en main.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:url" content="https://www.sololifeacademy.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZ1rib2Bg-4.woff2"
+    as="font" type="font/woff2" crossorigin>
+  <link rel="preload"
+    href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZ1rib2Bg-4.woff2"
+    as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Critical CSS inlined for above-the-fold rendering -->
+  <style>
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: #08081A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .6s ease, visibility .6s ease
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    .loader-inner {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem
+    }
+
+    .loader-logo {
+      animation: loaderPulse 1.5s ease-in-out infinite
+    }
+
+    .loader-logo img {
+      width: 180px;
+      height: auto;
+      filter: drop-shadow(0 0 30px rgba(124, 77, 255, 0.4))
+    }
+
+    .loader-ring {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(187, 134, 252, 0.15);
+      border-top-color: #BB86FC;
+      border-radius: 50%;
+      animation: loaderSpin .8s linear infinite
+    }
+
+    .loader-bar {
+      width: 200px;
+      height: 3px;
+      background: rgba(187, 134, 252, 0.1);
+      border-radius: 999px;
+      overflow: hidden
+    }
+
+    .loader-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #7C4DFF, #BB86FC);
+      border-radius: 999px;
+      transition: width .3s ease
+    }
+
+    .loader-text {
+      font-family: 'Inter', sans-serif;
+      font-size: .8rem;
+      color: rgba(155, 147, 176, 0.6);
+      letter-spacing: 2px;
+      text-transform: uppercase
+    }
+
+    @keyframes loaderSpin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes loaderPulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .7;
+        transform: scale(.95)
+      }
+    }
+
+    :root {
+      --bg: #08081A;
+      --bg-card: rgba(18, 14, 36, 0.65);
+      --bg-card-solid: #120E24;
+      --bg-alt: #0D0B1E;
+      --bg-glass: rgba(22, 18, 42, 0.55);
+      --purple: #BB86FC;
+      --purple-light: #D1C4E9;
+      --purple-deep: #7C4DFF;
+      --purple-glow: rgba(187, 134, 252, 0.25);
+      --purple-dim: rgba(187, 134, 252, 0.08);
+      --purple-gradient: linear-gradient(135deg, #7C4DFF, #BB86FC, #D1C4E9);
+      --white: #F5F3FF;
+      --text: #E8E4F0;
+      --text-dim: #9B93B0;
+      --text-muted: #6B6380;
+      --border: rgba(187, 134, 252, 0.12);
+      --border-strong: rgba(187, 134, 252, 0.3);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      --font: 'Inter', sans-serif;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased
+    }
+
+    img,
+    svg,
+    canvas {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      background: none;
+      border: none;
+      cursor: pointer
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.25rem
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: .85rem 0;
+      background: rgba(8, 8, 26, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(187, 134, 252, 0.08);
+      transition: all var(--transition)
+    }
+
+    .nav.scrolled {
+      padding: .6rem 0;
+      background: rgba(8, 8, 26, 0.92);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border-bottom: 1px solid rgba(187, 134, 252, 0.12);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3)
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .nav-logo img {
+      height: 36px;
+      width: auto
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: .88rem;
+      color: rgba(255, 255, 255, 0.8);
+      transition: color var(--transition)
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white)
+    }
+
+    .nav-cta {
+      margin-left: .5rem
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 26px;
+      z-index: 1001
+    }
+
+    .hamburger span {
+      height: 2px;
+      background: var(--purple-light);
+      border-radius: 2px;
+      transition: all var(--transition)
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 0 4rem;
+      overflow: hidden
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: .45;
+      filter: brightness(0.9);
+      position: absolute;
+      inset: 0
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(8, 8, 26, 0.3) 0%, rgba(8, 8, 26, 0.6) 60%, var(--bg) 100%), radial-gradient(ellipse 70% 60% at center 40%, transparent 20%, var(--bg) 100%)
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: 0 auto
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .55rem 1.5rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-strong);
+      background: var(--purple-dim);
+      color: var(--purple-light);
+      font-weight: 600;
+      font-size: .85rem;
+      margin-bottom: 2rem
+    }
+
+    .hero-title {
+      font-weight: 900;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.5rem
+    }
+
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--purple-gradient);
+      z-index: 99999;
+      pointer-events: none;
+      box-shadow: 0 0 12px var(--purple-glow);
+      transition: width 0.05s linear
+    }
+
+    body.loading {
+      overflow: hidden
+    }
+
+    @media(max-width:768px) {
+      .nav-links {
+        display: none
+      }
+
+      .hamburger {
+        display: flex
+      }
+    }
+  </style>
+  <!-- Non-critical CSS loaded asynchronously -->
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </noscript>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Solo Life Academy","url":"https://www.sololifeacademy.com"}
+  </script>
+</head>
+
+<body>
+  <!-- ══════════ LOADING SCREEN ══════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <img src="assets/img/logo.svg" alt="Solo Life Academy" width="200" height="50">
+      </div>
+      <div class="loader-ring"></div>
+      <div class="loader-bar">
+        <div class="loader-bar-fill" id="loader-bar-fill"></div>
+      </div>
+      <p class="loader-text">Chargement<span class="loader-dots">...</span></p>
+    </div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════ NAV — Capsule style wenoble ══════════ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo"><img src="assets/img/logo.svg" alt="Solo Life Academy" width="160"
+          height="40"></a>
+      <nav class="nav-links">
+        <a href="#trading" class="nav-link" data-section="trading">Trading</a>
+        <a href="#ecommerce" class="nav-link" data-section="ecommerce">E-Commerce</a>
+        <a href="#resultats" class="nav-link" data-section="resultats">Résultats</a>
+        <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+        <a href="#partenaire" class="nav-link" data-section="partenaire">Partenaire</a>
+        <a href="#booking" class="btn btn-purple btn-sm nav-cta">Réserver un appel →</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <a href="#trading" class="nav-link">Trading</a>
+      <a href="#ecommerce" class="nav-link">E-Commerce</a>
+      <a href="#resultats" class="nav-link">Résultats</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#partenaire" class="nav-link">Partenaire</a>
+      <a href="#booking" class="btn btn-purple">Réserver un appel</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ══════════ HERO — Wenoble style ══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <video muted loop playsinline preload="none" class="hero-bg-img"
+          data-lazy-video="assets/hf_20260301_015857_5614105c-351f-4b86-97b8-c04081dcbdad.mp4">
+        </video>
+        <div class="hero-gradient"></div>
+      </div>
+
+      <div class="container hero-content">
+
+        <!-- Social proof pill top -->
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span class="stars-sm">★★★★★</span>
+          Salué par +150 membres accompagnés
+        </div>
+
+        <!-- Big impactful title -->
+        <h1 class="hero-title">
+          On te crée un business qui te rapporte,<br>
+          <span class="text-gradient">on fait le travail pour toi.</span>
+        </h1>
+
+        <p class="hero-sub-line">
+          Trading automatisé · Copy trading VIP · E-commerce clé en main
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-ctas">
+          <a href="#booking" class="btn btn-purple btn-lg">
+            Réserver mon appel gratuit
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="#resultats" class="btn btn-outline btn-lg">
+            Voir les résultats →
+          </a>
+        </div>
+        <div class="trust-badges-row">
+          <img src="assets/img/iconpaiment.svg" alt="Moyens de paiement acceptés" height="28" loading="lazy"
+            style="display:block;margin:0 auto;">
+          <span class="trust-security-text">Paiement 100% sécurisé · Satisfait ou remboursé</span>
+        </div>
+
+        <!-- Video placeholder -->
+        <div class="hero-video-wrap" data-gsap="fade-up">
+          <div class="hero-video-label">
+            <span class="text-gradient-inline">Découvre</span> pourquoi ça fonctionne en vidéo
+          </div>
+          <div class="hero-video-container">
+            <video autoplay muted loop playsinline preload="metadata" class="hero-video"
+              data-lazy-video="assets/video-hero.mp4" poster="assets/img/hero-bg.png">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ STATS BENTO — wenoble "en chiffres" style ══════════ -->
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="section-header" data-gsap="fade-up">
+          <h2 class="section-title">Solo Life Academy <span class="text-gradient">en chiffres</span></h2>
+        </div>
+        <div class="bento-grid" data-gsap="fade-up">
+
+          <div class="bento-card bento-main">
+            <span class="bento-icon">📈</span>
+            <h3>Un business en ligne, c'est rien sans <span class="text-gradient">stratégie</span></h3>
+            <ul class="bento-list">
+              <li>Comprendre TON marché et TES objectifs</li>
+              <li>Identifier les canaux les plus rentables</li>
+              <li>Lancer un système automatisé et scalable</li>
+            </ul>
+            <a href="#booking" class="btn btn-white btn-sm">C'est ce qu'il me faut →</a>
+          </div>
+
+          <div class="bento-card bento-highlight">
+            <span class="bento-big-number" data-count="150">0</span>
+            <span class="bento-suffix">membres</span>
+            <p>accompagnés depuis 2024</p>
+          </div>
+
+          <div class="bento-card">
+            <span class="bento-big-number" data-count="97" data-suffix="%">0</span>
+            <p>de satisfaction client</p>
+          </div>
+
+          <div class="bento-card bento-chart">
+            <p class="bento-chart-label">rendement moyen trading auto</p>
+            <span class="bento-big-number text-gradient" data-count="42" data-suffix="%">0</span>
+            <div class="bento-chart-bar">
+              <div class="bento-chart-fill"></div>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <span class="bento-big-number" data-count="500" data-suffix="€">0</span>
+            <p>capital minimum pour démarrer</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ VU SUR — Social proof logos ══════════ -->
+    <div class="seen-on-section" data-gsap="fade-up">
+      <div class="container">
+        <p class="seen-on-label">Ils en parlent</p>
+        <div class="seen-on-logos">
+          <div class="seen-on-logo">
+            <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="30" rx="4" fill="#fff" fill-opacity=".06" /><text x="60" y="19"
+                text-anchor="middle" font-size="10" font-weight="700" fill="#fff" fill-opacity=".5"
+                font-family="Inter,sans-serif">FORBES</text>
+            </svg>
+          </div>
+          <div class="seen-on-logo">
+            <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="30" rx="4" fill="#fff" fill-opacity=".06" /><text x="60" y="19"
+                text-anchor="middle" font-size="10" font-weight="700" fill="#fff" fill-opacity=".5"
+                font-family="Inter,sans-serif">BFMTV</text>
+            </svg>
+          </div>
+          <div class="seen-on-logo">
+            <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="30" rx="4" fill="#fff" fill-opacity=".06" /><text x="60" y="19"
+                text-anchor="middle" font-size="10" font-weight="700" fill="#fff" fill-opacity=".5"
+                font-family="Inter,sans-serif">LE FIGARO</text>
+            </svg>
+          </div>
+          <div class="seen-on-logo">
+            <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="30" rx="4" fill="#fff" fill-opacity=".06" /><text x="60" y="19"
+                text-anchor="middle" font-size="10" font-weight="700" fill="#fff" fill-opacity=".5"
+                font-family="Inter,sans-serif">TF1</text>
+            </svg>
+          </div>
+          <div class="seen-on-logo">
+            <svg viewBox="0 0 120 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="30" rx="4" fill="#fff" fill-opacity=".06" /><text x="60" y="19"
+                text-anchor="middle" font-size="10" font-weight="700" fill="#fff" fill-opacity=".5"
+                font-family="Inter,sans-serif">CAPITAL</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>TRADING AUTOMATISÉ</span><span class="dot">◆</span>
+          <span>COPY TRADING VIP</span><span class="dot">◆</span>
+          <span>E-COMMERCE CLÉ EN MAIN</span><span class="dot">◆</span>
+          <span>RÉSULTATS RÉELS</span><span class="dot">◆</span>
+          <span>LIBERTÉ FINANCIÈRE</span><span class="dot">◆</span>
+          <span>ACCOMPAGNEMENT HUMAIN</span><span class="dot">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ TRADING ══════════ -->
+    <section class="section" id="trading">
+      <div class="container">
+        <div class="section-header" data-gsap="fade-up">
+          <div class="pill">💰 Nos offres Trading</div>
+          <h2 class="section-title">Le trading, <span class="text-gradient">géré pour toi.</span></h2>
+          <p class="section-sub">Choisis l'offre qui te correspond. Nos experts s'occupent du reste.</p>
+        </div>
+
+        <div class="cards-row">
+          <!-- CARD A -->
+          <div class="glass-card card-featured" data-gsap="fade-up" data-delay="0">
+            <div class="card-glow"></div>
+            <span class="card-badge badge-primary">⚡ Recommandé</span>
+            <h3>Trading Automatique</h3>
+            <p class="card-sub">On trade pour toi — chaque position est répliquée automatiquement.</p>
+            <ul class="check-list">
+              <li>Accès VIP dédié (200€ one-time)</li>
+              <li>Capital minimum : 500€</li>
+              <li>Réplication automatique</li>
+              <li>Suivi en temps réel</li>
+              <li>Support prioritaire</li>
+            </ul>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="cond-gestion">
+                <span>Voir les conditions</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content" id="cond-gestion">
+                <div class="accordion-inner">
+                  <p>• 18 ans minimum<br>• Capital min 500€<br>• Engagement 3 mois<br>• Retrait avant 3 mois : frais
+                    40%<br>• Retrait après 3 mois : frais 20%<br>• Accès VIP : 200€</p>
+                </div>
+              </div>
+            </div>
+            <div class="availability-badge"><span class="dot-live"></span> Plus que 13 places disponibles</div>
+            <a href="https://buy.stripe.com/8x2eVddIfa5Q1G6b7c3AY03" class="btn btn-purple" target="_blank"
+              rel="noopener">Obtenir mon accès →</a>
+            <div class="trust-badges-row">
+              <img src="assets/img/iconpaiment.svg" alt="Moyens de paiement acceptés" height="28" loading="lazy"
+                style="display:block;margin:0 auto;">
+              <span class="trust-security-text">Paiement 100% sécurisé · Satisfait ou remboursé</span>
+            </div>
+          </div>
+
+          <!-- CARD B -->
+          <div class="glass-card" data-gsap="fade-up" data-delay="150">
+            <span class="card-badge">📈 Copy Trading</span>
+            <h3>Copy Trading VIP</h3>
+            <p class="card-sub">Les signaux du pro, dans ton téléphone. Tu copies, simplement.</p>
+            <ul class="check-list">
+              <li>Accès VIP GRATUIT</li>
+              <li>Capital minimum : 500€</li>
+              <li>Signaux en temps réel</li>
+              <li>Explication de chaque trade</li>
+              <li>Communauté active</li>
+            </ul>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="cond-copy">
+                <span>Voir les conditions</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content" id="cond-copy">
+                <div class="accordion-inner">
+                  <p>• 18 ans minimum<br>• Capital min 500€<br>• Gratuit (rémunération sur lots tradés)<br>• Lien via
+                    collaborateur référent</p>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-outline" data-open-form="copy">Rejoindre le groupe →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ GARANTIE BANNER — wenoble style ══════════ -->
+    <section class="guarantee-banner" data-gsap="fade-up">
+      <div class="container">
+        <h2>Et si ça ne marche pas pour moi ?<br>
+          Tous nos accompagnements sont <span class="text-gradient-inline">GARANTIS Résultats</span></h2>
+        <p class="guarantee-small">Oui… Vous avez bien lu.</p>
+        <a href="#booking" class="btn btn-purple btn-lg">Réserver mon appel gratuit →</a>
+      </div>
+    </section>
+
+    <!-- ══════════ E-COMMERCE ══════════ -->
+    <section class="section section-alt" id="ecommerce">
+      <div class="container">
+        <div class="section-header" data-gsap="fade-up">
+          <div class="pill">🛒 Formations E-Commerce</div>
+          <h2 class="section-title">Lance ton business.<br><span class="text-gradient">On t'accompagne.</span></h2>
+          <p class="section-sub">Formations concrètes + suivi humain. Passe à l'action maintenant.</p>
+        </div>
+
+        <div class="pricing-row">
+          <!-- Pack Pro -->
+          <div class="pricing-card card-featured" data-gsap="fade-up" data-delay="0">
+            <div class="card-glow"></div>
+            <div class="pricing-header">
+              <span class="card-badge badge-primary">🏆 Le plus complet</span>
+              <h3>Pack Pro</h3>
+              <span class="limited-badge">🔥 Offre limitée</span>
+              <div class="pricing-price">1 499€</div>
+            </div>
+            <ul class="check-list">
+              <li>16h de cours en ligne</li>
+              <li>Boutique clé en main</li>
+              <li>Accompagnement 3 mois</li>
+              <li>Support direct formateur</li>
+              <li>Mises à jour incluses</li>
+            </ul>
+            <div class="guarantee-strip">🛡️ Satisfait ou Remboursé</div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="cond-garantie">
+                <span>Conditions de garantie</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-content" id="cond-garantie">
+                <div class="accordion-inner">
+                  <p>14h de cours suivies minimum, boutique lancée, CA sous 5 000€ sur 3 mois → remboursement intégral.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="availability-badge"><span class="dot-live"></span> Plus que 2 places disponibles</div>
+            <button class="btn btn-purple" data-open-modal="modal-pro">Choisir le Pack Pro →</button>
+            <div class="trust-badges-row">
+              <img src="assets/img/iconpaiment.svg" alt="Moyens de paiement acceptés" height="28" loading="lazy"
+                style="display:block;margin:0 auto;">
+              <span class="trust-security-text">Paiement 100% sécurisé · Satisfait ou remboursé</span>
+            </div>
+          </div>
+
+          <!-- Pack Essentiel -->
+          <div class="pricing-card" data-gsap="fade-up" data-delay="150">
+            <div class="pricing-header">
+              <span class="card-badge">📦 Essentiel</span>
+              <h3>Pack Essentiel</h3>
+              <div class="pricing-price">599€</div>
+            </div>
+            <ul class="check-list">
+              <li>8h de cours en ligne</li>
+              <li>Accompagnement 1 mois</li>
+              <li>Support messagerie</li>
+              <li class="disabled">Boutique clé en main</li>
+              <li class="disabled">Accompagnement 3 mois</li>
+            </ul>
+            <div class="availability-badge"><span class="dot-live"></span> Plus que 2 places disponibles</div>
+            <button class="btn btn-outline" data-open-modal="modal-essentiel">Choisir le Pack Essentiel →</button>
+            <div class="trust-badges-row">
+              <img src="assets/img/iconpaiment.svg" alt="Moyens de paiement acceptés" height="28" loading="lazy"
+                style="display:block;margin:0 auto;">
+              <span class="trust-security-text">Paiement 100% sécurisé · Satisfait ou remboursé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ RÉSULTATS / TÉMOIGNAGES — wenoble success stories ══════════ -->
+    <section class="section" id="resultats">
+      <div class="container">
+        <div class="section-header" data-gsap="fade-up">
+          <div class="pill">⭐ Résultats vérifiés</div>
+          <h2 class="section-title">Des success stories qui prouvent<br>que <span class="text-gradient">ça marche
+              !</span></h2>
+          <p class="section-sub">+150 avis vérifiés — Note moyenne de 4.9/5</p>
+        </div>
+
+        <!-- Review summary bar -->
+        <div class="review-summary" data-gsap="fade-up">
+          <div class="review-summary-left">
+            <div class="review-big-score">4.9</div>
+            <div class="review-big-stars">★★★★★</div>
+            <span class="review-count">Basé sur 153 avis</span>
+          </div>
+          <div class="review-bars">
+            <div class="bar-row"><span>5 ★</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:89%"></div>
+              </div><span>89%</span>
+            </div>
+            <div class="bar-row"><span>4 ★</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:8%"></div>
+              </div><span>8%</span>
+            </div>
+            <div class="bar-row"><span>3 ★</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:2%"></div>
+              </div><span>2%</span>
+            </div>
+            <div class="bar-row"><span>2 ★</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:1%"></div>
+              </div><span>1%</span>
+            </div>
+            <div class="bar-row"><span>1 ★</span>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:0%"></div>
+              </div><span>0%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews grid -->
+        <div class="reviews-grid">
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="0">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">J'étais sceptique au début, comme beaucoup. Mais après 2 mois de trading automatique,
+              mon capital a fait +38%. L'équipe est dispo, les résultats sont là. Honnêtement, c'est la meilleure
+              décision financière de ma vie.</p>
+            <div class="review-footer">
+              <div class="review-avatar">Y</div>
+              <div class="review-meta">
+                <div class="review-name">Yassine B. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Trading Automatique</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="80">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Le Pack Pro m'a tout donné : la boutique, les fournisseurs, la stratégie pub. En 3
+              mois j'ai atteint 8 000€ de CA. Le suivi est incroyable, on n'est jamais seul. Je recommande à 100%.</p>
+            <div class="review-footer">
+              <div class="review-avatar">S</div>
+              <div class="review-meta">
+                <div class="review-name">Sarah L. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Pack Pro E-Commerce</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="160">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Je ne connaissais rien au trading. Le copy trading VIP m'a permis de suivre les
+              positions d'un pro sans effort. +25% en 6 semaines avec 500€ de capital. Le groupe privé est une mine
+              d'or.</p>
+            <div class="review-footer">
+              <div class="review-avatar">K</div>
+              <div class="review-meta">
+                <div class="review-name">Karim M. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Copy Trading VIP</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="0">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Ce qui m'a convaincue c'est l'appel gratuit. Pas de pression, juste des faits. Le
+              formateur m'a guidée pas à pas pour lancer mon e-commerce. Aujourd'hui je fais mes premières ventes.</p>
+            <div class="review-footer">
+              <div class="review-avatar">L</div>
+              <div class="review-meta">
+                <div class="review-name">Laura P. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Pack Essentiel</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="80">
+            <div class="review-stars">★ ★ ★ ★ <span class="star-empty">★</span></div>
+            <p class="review-text">Le trading auto fonctionne bien, +18% sur 3 mois. J'aurais aimé des résultats plus
+              rapides au début, mais l'équipe m'a bien expliqué que c'est normal. Au final très content du service.</p>
+            <div class="review-footer">
+              <div class="review-avatar">A</div>
+              <div class="review-meta">
+                <div class="review-name">Adrien T. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Trading Automatique</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card glass-card" data-gsap="fade-up" data-delay="160">
+            <div class="review-stars">★ ★ ★ ★ ★</div>
+            <p class="review-text">Après 4 mois entre le trading et ma boutique e-commerce, j'ai pris la décision de
+              quitter mon CDI. Aujourd'hui je vis de mes revenus en ligne. Merci Solo Life. 🙏</p>
+            <div class="review-footer">
+              <div class="review-avatar">N</div>
+              <div class="review-meta">
+                <div class="review-name">Noémie D. <span class="verified">✓ Vérifié</span></div>
+                <div class="review-date">Trading + E-Commerce</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header" data-gsap="fade-up">
+          <div class="pill">❓ FAQ</div>
+          <h2 class="section-title">Questions fréquentes</h2>
+        </div>
+        <div class="faq-wrapper" data-gsap="fade-up">
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-1"><span>Puis-je retirer mon argent quand je veux ?</span><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-1">
+              <div class="accordion-inner">
+                <p>Tu peux retirer à tout moment. Retrait avant 3 mois : frais 40%. Après 3 mois : frais 20%.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-2"><span>Comment fonctionne le trading automatique ?</span><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-2">
+              <div class="accordion-inner">
+                <p>Notre trader passe ses ordres sur son compte. Ils sont répliqués automatiquement sur le tien via API
+                  sécurisée.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-3"><span>Comment rejoindre le Copy Trading VIP ?</span><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-3">
+              <div class="accordion-inner">
+                <p>Accès VIP via le lien de ton collaborateur référent. Pas de lien ? Contacte-nous via le formulaire.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-4"><span>La garantie e-commerce s'applique toujours ?</span><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-4">
+              <div class="accordion-inner">
+                <p>Oui si : 14h+ de cours suivies, boutique lancée, CA sous 5 000€ sur 3 mois. Les 3 conditions réunies
+                  = remboursement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-5"><span>Quel capital minimum pour le trading ?</span><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-5">
+              <div class="accordion-inner">
+                <p>500€ minimum pour les offres trading. Pour l'e-commerce, seul le prix de la formation est demandé.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item"><button class="accordion-trigger" aria-expanded="false"
+              aria-controls="faq-6"><span>Le paiement est-il sécurisé ?</span><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg></button>
+            <div class="accordion-content" id="faq-6">
+              <div class="accordion-inner">
+                <p>Tous paiements via Stripe. Tes données bancaires ne sont jamais sur nos serveurs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA FINAL ══════════ -->
+    <section class="section cta-section" id="booking">
+      <div class="container cta-content" data-gsap="fade-up">
+        <h2 class="section-title">Prêt à changer de vie ?</h2>
+        <p class="section-sub">Réserve un appel stratégique de 30 min. Gratuit. Sans engagement.</p>
+        <a href="#booking" class="btn btn-purple btn-lg"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sololifeacademy'});return false;">
+          Réserver mon appel gratuit →
+        </a>
+        <div class="cta-reassurance">
+          <span>✓ Gratuit</span>
+          <span>✓ Sans engagement</span>
+          <span>✓ Réponse sous 24h</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ MODALS ══════════ -->
+  <div class="modal-overlay" id="modal-pro" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fermer">&times;</button>
+      <span class="card-badge badge-primary">🏆 Le plus complet</span>
+      <h3>Pack Pro — 1 499€</h3>
+      <ul class="check-list">
+        <li>16h de cours</li>
+        <li>Boutique clé en main</li>
+        <li>Accompagnement 3 mois</li>
+        <li>Support direct</li>
+        <li>Mises à jour incluses</li>
+      </ul>
+      <div class="guarantee-strip">🛡️ Satisfait ou Remboursé</div>
+      <a href="https://buy.stripe.com/5kQ6oH6fN7XI1G6dfk3AY02" class="btn btn-purple btn-lg stripe-link" target="_blank"
+        rel="noopener">Payer 1
+        499€ — Accès immédiat</a>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal-essentiel" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fermer">&times;</button>
+      <span class="card-badge">📦 Essentiel</span>
+      <h3>Pack Essentiel — 599€</h3>
+      <ul class="check-list">
+        <li>8h de cours</li>
+        <li>Accompagnement 1 mois</li>
+        <li>Support messagerie</li>
+      </ul>
+      <a href="https://buy.stripe.com/dRm5kDcEb3HsesS7V03AY01" class="btn btn-purple btn-lg stripe-link" target="_blank"
+        rel="noopener">Payer
+        599€ — Accès immédiat</a>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="modal-overlay" id="contact-form-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+    aria-labelledby="contact-form-title">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fermer">&times;</button>
+      <h3 id="contact-form-title">Demande d'accès</h3>
+      <p class="card-sub">Remplis ce formulaire et on te recontacte sous 24h.</p>
+      <form action="https://formspree.io/f/TON_FORM_ID" method="POST">
+        <input type="hidden" name="ref" id="form-ref" value="direct">
+        <input type="hidden" name="offre" id="form-offre" value="">
+        <div class="form-group"><label for="form-prenom">Prénom</label><input type="text" id="form-prenom" name="prenom"
+            required placeholder="Ton prénom"></div>
+        <div class="form-group"><label for="form-email">Email</label><input type="email" id="form-email" name="email"
+            required placeholder="ton@email.com"></div>
+        <div class="form-group"><label for="form-tel">Téléphone</label><input type="tel" id="form-tel" name="telephone"
+            placeholder="+33 6 12 34 56 78"></div>
+        <div class="form-group"><label for="form-message">Message</label><textarea id="form-message" name="message"
+            rows="3" placeholder="Une question ?"></textarea></div>
+        <button type="submit" class="btn btn-purple" style="width:100%;">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════ PROGRAMME PARTENAIRE ══════════ -->
+  <section class="section section-alt" id="partenaire">
+    <div class="container">
+      <div class="section-header" data-gsap="fade-up">
+        <div class="pill">🤝 Programme Partenaire</div>
+        <h2 class="section-title">Programme <span class="text-gradient">Partenaire</span></h2>
+        <p class="section-sub">Exclusivement réservé aux membres de l'académie</p>
+      </div>
+
+      <div class="partenaire-grid" data-gsap="fade-up">
+
+        <div class="partenaire-card glass-card" data-gsap="fade-up" data-delay="0">
+          <div class="partenaire-icon">🔗</div>
+          <h3>Comment ça marche</h3>
+          <ul class="check-list">
+            <li>Tu obtiens ton lien personnel</li>
+            <li>Tu recommandes l'académie</li>
+            <li>Tu touches une commission sur chaque vente</li>
+          </ul>
+        </div>
+
+        <div class="partenaire-card glass-card" data-gsap="fade-up" data-delay="100">
+          <div class="partenaire-icon">📋</div>
+          <h3>Conditions</h3>
+          <ul class="check-list">
+            <li>Être membre actif (Programme E-commerce ou Trading)</li>
+            <li>Respecter notre charte éthique</li>
+            <li>Pas de promesses de gains irréalistes</li>
+          </ul>
+        </div>
+
+        <div class="partenaire-card glass-card" data-gsap="fade-up" data-delay="200">
+          <div class="partenaire-icon">💎</div>
+          <h3>Pourquoi devenir partenaire</h3>
+          <ul class="check-list">
+            <li>Génère des revenus supplémentaires</li>
+            <li>Partage une formation que tu utilises toi-même</li>
+            <li>Système simple et transparent</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="partenaire-cta" data-gsap="fade-up">
+        <a href="#booking" class="btn btn-purple btn-lg"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sololifeacademy'});return false;">
+          Devenir Partenaire →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><img src="assets/img/logo.svg" alt="Solo Life Academy" width="140" height="36"
+            loading="lazy" decoding="async">
+          <p>Ta liberté financière commence ici.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#trading">Trading</a><a href="#ecommerce">E-Commerce</a><a href="#faq">FAQ</a><a
+            href="#partenaire">Partenaire</a><a href="#booking">Réserver</a><a href="mentions-legales.html">Mentions
+            légales</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Solo Life Academy. Tous droits réservés.</p>
+        <p class="disclaimer">Le trading comporte des risques de perte en capital. Les performances passées ne préjugent
+          pas des performances futures.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

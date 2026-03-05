@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions Légales — Solo Life Academy</title>
+  <meta name="description" content="Mentions légales du site Solo Life Academy.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Aller au contenu</a>
+
+  <!-- Navigation -->
+  <header class="nav scrolled" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Solo Life Academy — Accueil">
+        <!-- REMPLACE : src="assets/img/logo.png" par ton vrai logo -->
+        <img src="assets/img/logo.png" alt="Solo Life Academy" width="160" height="40">
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="index.html#trading" class="nav-link">Trading</a>
+        <a href="index.html#ecommerce" class="nav-link">E-Commerce</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+        <a href="index.html#booking" class="btn btn-primary btn-sm nav-cta nav-cta-desktop">Réserver un appel</a>
+      </nav>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-mobile-legal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile-legal" aria-hidden="true">
+      <a href="index.html#trading" class="nav-link">Trading</a>
+      <a href="index.html#ecommerce" class="nav-link">E-Commerce</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+      <a href="index.html#booking" class="btn btn-primary">Réserver un appel</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container legal-page">
+      <h1>Mentions Légales</h1>
+
+      <h2>Éditeur du site</h2>
+      <!-- REMPLACE : les informations ci-dessous par tes vraies données -->
+      <p>
+        <strong>Raison sociale :</strong> [NOM DE L'ENTREPRISE]<br>
+        <strong>Forme juridique :</strong> [FORME JURIDIQUE]<br>
+        <strong>SIRET :</strong> [NUMÉRO SIRET]<br>
+        <strong>Capital social :</strong> [MONTANT] €<br>
+        <strong>Adresse du siège :</strong> [ADRESSE COMPLÈTE]<br>
+        <strong>Téléphone :</strong> [NUMÉRO DE TÉLÉPHONE]<br>
+        <strong>Email :</strong> [EMAIL DE CONTACT]
+      </p>
+
+      <h2>Directeur de la publication</h2>
+      <p>[PRÉNOM NOM DU RESPONSABLE]</p>
+
+      <h2>Hébergeur</h2>
+      <p>
+        <strong>Nom :</strong> Netlify, Inc.<br>
+        <strong>Adresse :</strong> 2325 3rd Street, Suite 296, San Francisco, CA 94107, USA<br>
+        <strong>Site web :</strong> netlify.com
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de Solo Life Academy, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
+
+      <h2>Données personnelles</h2>
+      <p>Les informations recueillies via les formulaires du site sont destinées exclusivement à Solo Life Academy. Elles sont nécessaires au traitement de votre demande. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit, contactez-nous à [EMAIL DE CONTACT].</p>
+
+      <h2>Cookies</h2>
+      <p>Ce site utilise le stockage local (localStorage) à des fins de suivi d'affiliation. Aucun cookie tiers de traçage n'est utilisé.</p>
+
+      <h2>Avertissement sur les risques</h2>
+      <p>Le trading de produits financiers comporte des risques importants de perte en capital. Les performances passées ne préjugent pas des performances futures. N'investissez que des fonds que vous pouvez vous permettre de perdre. Solo Life Academy ne garantit aucun rendement ni résultat financier.</p>
+
+      <h2>Limitation de responsabilité</h2>
+      <p>Solo Life Academy met tout en œuvre pour assurer l'exactitude des informations diffusées sur ce site. Toutefois, elle ne saurait être tenue responsable des omissions, inexactitudes ou résultats obtenus suite à l'utilisation de ces informations.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="Solo Life Academy" width="140" height="36" loading="lazy">
+          <p>Ta liberté financière commence ici.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#trading" class="footer-link">Trading</a>
+          <a href="index.html#ecommerce" class="footer-link">E-Commerce</a>
+          <a href="index.html#faq" class="footer-link">FAQ</a>
+          <a href="index.html#booking" class="footer-link">Réserver un appel</a>
+          <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Solo Life Academy. Tous droits réservés.</p>
+        <p class="footer-disclaimer">Le trading comporte des risques de perte en capital. Les performances passées ne préjugent pas des performances futures. N'investissez que ce que vous pouvez vous permettre de perdre.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger toggle for legal page
+    (function() {
+      var hamburger = document.querySelector('.hamburger');
+      var mobileNav = document.getElementById('nav-mobile-legal');
+      function closeMobileNav() {
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', function() {
+          var isOpen = this.getAttribute('aria-expanded') === 'true';
+          if (isOpen) { closeMobileNav(); } else {
+            this.setAttribute('aria-expanded', 'true');
+            mobileNav.classList.add('open');
+            mobileNav.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+        mobileNav.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', closeMobileNav);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
