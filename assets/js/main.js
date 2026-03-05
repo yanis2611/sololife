@@ -504,10 +504,8 @@
             video.appendChild(source);
             video.load();
             video.play().catch(function () {
-              video.setAttribute('controls', 'true');
               document.addEventListener('touchstart', function playOnTouch() {
                 video.play();
-                video.removeAttribute('controls');
                 document.removeEventListener('touchstart', playOnTouch);
               }, { once: true });
             });
@@ -615,6 +613,40 @@
       btn.addEventListener('mouseleave', function () {
         btn.style.transform = '';
       });
+    });
+  }
+
+  /* ─── 15b. HERO VIDEO CUSTOM CONTROLS ─── */
+  var heroVideo = document.querySelector('.hero-video');
+  var playBtn = document.getElementById('hero-play-btn');
+  var muteBtn = document.getElementById('hero-mute-btn');
+  if (heroVideo && playBtn) {
+    playBtn.addEventListener('click', function () {
+      if (heroVideo.paused) {
+        heroVideo.play();
+        playBtn.querySelector('.icon-pause').style.display = '';
+        playBtn.querySelector('.icon-play').style.display = 'none';
+        playBtn.setAttribute('aria-label', 'Pause la vidéo');
+      } else {
+        heroVideo.pause();
+        playBtn.querySelector('.icon-pause').style.display = 'none';
+        playBtn.querySelector('.icon-play').style.display = '';
+        playBtn.setAttribute('aria-label', 'Lire la vidéo');
+      }
+    });
+  }
+  if (heroVideo && muteBtn) {
+    muteBtn.addEventListener('click', function () {
+      heroVideo.muted = !heroVideo.muted;
+      if (heroVideo.muted) {
+        muteBtn.querySelector('.icon-muted').style.display = '';
+        muteBtn.querySelector('.icon-unmuted').style.display = 'none';
+        muteBtn.setAttribute('aria-label', 'Activer le son');
+      } else {
+        muteBtn.querySelector('.icon-muted').style.display = 'none';
+        muteBtn.querySelector('.icon-unmuted').style.display = '';
+        muteBtn.setAttribute('aria-label', 'Couper le son');
+      }
     });
   }
 

@@ -2038,6 +2038,60 @@ h4.review-title {
   border-radius: var(--radius-lg);
 }
 
+/* ═══════ CUSTOM VIDEO CONTROLS ═══════ */
+.video-ctrl {
+  position: absolute;
+  bottom: 12px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(8, 8, 26, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.video-ctrl:hover {
+  opacity: 1;
+  background: rgba(8, 8, 26, 0.8);
+  box-shadow: 0 0 16px rgba(187, 134, 252, 0.3);
+  border-color: rgba(187, 134, 252, 0.4);
+}
+
+.video-ctrl svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.video-ctrl-play {
+  left: 12px;
+}
+
+.video-ctrl-mute {
+  right: 12px;
+}
+
+@media (max-width: 767px) {
+  .video-ctrl {
+    width: 48px;
+    height: 48px;
+  }
+
+  .video-ctrl svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* ═══════ BENTO GRID — Stats section ═══════ */
 .bento-grid {
   display: grid;
