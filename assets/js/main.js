@@ -424,7 +424,7 @@
       document.addEventListener('mousemove', function (e) {
         var xr = (e.clientX / window.innerWidth - .5);
         var yr = (e.clientY / window.innerHeight - .5);
-        gsap.to('.hero-bg-img', { x: xr * 20, y: yr * 20, duration: 2, ease: 'power2.out' });
+        gsap.to('.hero-slider', { x: xr * 20, y: yr * 20, duration: 2, ease: 'power2.out' });
       });
     }
 
@@ -650,6 +650,96 @@
     });
   }
 
-  /* ─── 16. INIT ─── */
+  /* ─── 15c. HERO IMAGE SLIDER ─── */
+  var heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    var currentHeroSlide = 0;
+    setInterval(function () {
+      heroSlides[currentHeroSlide].classList.remove('hero-slide-active');
+      currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+      var next = heroSlides[currentHeroSlide];
+      // Reset Ken Burns animation
+      next.style.animation = 'none';
+      next.offsetHeight; // trigger reflow
+      next.style.animation = '';
+      next.classList.add('hero-slide-active');
+    }, 4500);
+  }
+
+  /* ─── 16. REVIEW CAROUSEL ─── */
+  var carousel = document.getElementById('reviews-carousel');
+  var track = document.getElementById('reviews-track');
+  var dotsContainer = document.getElementById('carousel-dots');
+  if (carousel && track && dotsContainer) {
+    var cards = track.querySelectorAll('.review-card');
+    var currentSlide = 0;
+    var cardsPerView = 3;
+    var autoplayInterval;
+
+    function getCardsPerView() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
+    }
+
+    function getTotalSlides() {
+      cardsPerView = getCardsPerView();
+      return Math.ceil(cards.length / cardsPerView);
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      var total = getTotalSlides();
+      for (var i = 0; i < total; i++) {
+        var dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+        dot.setAttribute('data-slide', i);
+        dot.addEventListener('click', function () {
+          goToSlide(parseInt(this.getAttribute('data-slide')));
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goToSlide(n) {
+      var total = getTotalSlides();
+      currentSlide = ((n % total) + total) % total;
+      var cardWidth = cards[0].offsetWidth + 24; // gap
+      track.style.transform = 'translateX(-' + (currentSlide * cardsPerView * cardWidth) + 'px)';
+      dotsContainer.querySelectorAll('.carousel-dot').forEach(function (d, i) {
+        d.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(function () {
+        goToSlide(currentSlide + 1);
+      }, 4000);
+    }
+
+    function stopAutoplay() { clearInterval(autoplayInterval); }
+
+    buildDots();
+    startAutoplay();
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+    window.addEventListener('resize', function () { buildDots(); goToSlide(0); });
+  }
+
+  /* ─── 17. STICKY MOBILE CTA ─── */
+  var stickyCta = document.getElementById('sticky-cta');
+  if (stickyCta) {
+    var heroSection = document.getElementById('hero');
+    var stickyObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        stickyCta.classList.toggle('visible', !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    if (heroSection) stickyObs.observe(heroSection);
+  }
+
+  /* ─── 18. INIT ─── */
   injectRef();
 })();
