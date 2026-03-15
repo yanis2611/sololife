@@ -650,21 +650,8 @@
     });
   }
 
-  /* ─── 15c. HERO IMAGE SLIDER ─── */
-  var heroSlides = document.querySelectorAll('.hero-slide');
-  if (heroSlides.length > 1) {
-    var currentHeroSlide = 0;
-    setInterval(function () {
-      heroSlides[currentHeroSlide].classList.remove('hero-slide-active');
-      currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-      var next = heroSlides[currentHeroSlide];
-      // Reset Ken Burns animation
-      next.style.animation = 'none';
-      next.offsetHeight; // trigger reflow
-      next.style.animation = '';
-      next.classList.add('hero-slide-active');
-    }, 4500);
-  }
+  /* ─── 15c. HERO IMAGE — responsive portrait/landscape via CSS ─── */
+  /* No JS needed: CSS shows portrait on mobile, landscape on desktop */
 
   /* ─── 16. REVIEW CAROUSEL ─── */
   var carousel = document.getElementById('reviews-carousel');

@@ -736,6 +736,7 @@ h3 {
 /* ═══════ HERO ═══════ */
 .hero {
   position: relative;
+  height: 100vh;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -769,11 +770,26 @@ h3 {
   transition: opacity 1.5s ease-in-out;
   will-change: opacity, transform;
   transform: scale(1);
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .hero-slide.hero-slide-active {
   opacity: 0.55;
   animation: kenBurns 6s ease-in-out forwards;
+}
+
+/* Portrait image on mobile, landscape on desktop */
+.hero-slide-portrait { display: block; }
+.hero-slide-landscape { display: block; }
+
+@media (max-width: 768px) {
+  .hero-slide-landscape { display: none !important; }
+  .hero-slide-portrait { object-position: center center; }
+}
+
+@media (min-width: 769px) {
+  .hero-slide-portrait { display: none !important; }
 }
 
 @keyframes kenBurns {
@@ -3007,13 +3023,20 @@ body.loading {
 /* ═══════ FOOTER SOCIAL ICONS ═══════ */
 .footer-socials {
   display: flex;
-  gap: .75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   margin-top: 1rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .footer-social-link {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  max-width: 100px;
+  max-height: 100px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--purple-dim);
   border: 1px solid var(--border);
@@ -3021,6 +3044,7 @@ body.loading {
   align-items: center;
   justify-content: center;
   transition: all var(--transition);
+  overflow: hidden;
 }
 
 .footer-social-link:hover {
@@ -3030,9 +3054,39 @@ body.loading {
 }
 
 .footer-social-link svg {
-  width: 16px;
-  height: 16px;
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px;
+  max-height: 20px;
+  flex-shrink: 0;
   fill: var(--purple-light);
+  display: block;
+}
+
+/* Mobile — social icons constrained to 60px max */
+@media (max-width: 768px) {
+  .footer-socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-social-link {
+    width: 40px;
+    height: 40px;
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .footer-social-link svg {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 60px;
+    max-height: 60px;
+  }
 }
 
 /* ═══════ RESPONSIVE — STICKY CTA BOTTOM PADDING ═══════ */
